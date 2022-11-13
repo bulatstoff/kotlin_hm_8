@@ -47,7 +47,7 @@ fun main() {
     var notesApp = NoteService
 
     notesApp.addNote(note1)
-    notesApp.deleteNote(1)
+    //notesApp.deleteNote(1)
     notesApp.addNote(note2)
 
     notesApp.editNote(1, Note(
@@ -72,8 +72,16 @@ fun main() {
             Comment(7, 23, 34, 54, "Привет3", 122433234, "guid", false)
         )
     ))
+  // notesApp.deleteNote(2)
+   // notesApp.deleteComment(1,4)
+    notesApp.editComment(1,Comment(4, 23, 34, 54, "ээх", 122433234, "nonono", false))
 
-notesApp.printCollection()
+    notesApp.deleteNote(1)
+    notesApp.printCollection()
+    notesApp.restoreNote(1)
+    notesApp.printCollection()
+
+
 }
 
 //data class Note(
